@@ -1,4 +1,4 @@
-Renamed the assocciated file to /etc/sudoers.d/sudoers.lecture
+Renamed groot.txt file to /etc/sudoers.d/sudoers.lecture
 Create a file with any name (e.g. privacy) in /etc/sudoers.d/ with the following lines.
 Defaults     lecture = always
 Defaults     lecture_file = /etc/sudoers.d/sudoers.lecture
