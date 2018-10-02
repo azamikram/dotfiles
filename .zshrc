@@ -89,5 +89,4 @@ eval `dircolors ~/.dir_colors/dircolors`
 fortune -aeso | cowsay | lolcat
 
 DEFAULT_USER="azam"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
