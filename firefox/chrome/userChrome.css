@@ -138,10 +138,3 @@
   text-align: center;
 }
 
-
-/* ============================================================================== */
-
-#urlbar {
-    /* Place bindings.xml in the same folder as userChrome.css */
-    -moz-binding: url("bindings.xml#urlbar") !important;
-}
