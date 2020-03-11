@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="af-magic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,6 +54,7 @@ ZSH_THEME="spaceship"
 plugins=(git rails ruby bundler rake autojump command-not-found github history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -85,8 +86,21 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sl="sl -e"
 
-eval `dircolors ~/.dir_colors/dircolors`
-fortune -aeso | cowsay | lolcat
+# eval `dircolors ~/.dir_colors/dircolors`
+fortune -aes | cowsay | lolcat
 
 DEFAULT_USER="azam"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
+export PATH="$PATH:$HOME/android-studio/bin"
+
+export NOTES_DIRECTORY="$HOME/.notes"
+export EDITOR='vim'
+
+alias n="notes"
+
+open() { (command xdg-open "$@" > /dev/null 2>&1 &) }
+ff() { (command firefox > /dev/null 2>&1 &) }
+
