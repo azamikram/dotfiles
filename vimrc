@@ -49,7 +49,6 @@ set smartcase
 " tab completion for files/bufferss
 set wildmode=longest,list
 set wildmenu
-set mouse+=a " enable mouse mode (scrolling, selection, etc)
 
 "--------------------
 " Misc configurations
