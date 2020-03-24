@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,10 +51,11 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby bundler rake autojump command-not-found github history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git ruby bundler rake command-not-found github history-substring-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -100,6 +101,7 @@ export NOTES_DIRECTORY="$HOME/.notes"
 export EDITOR='vim'
 
 alias n="notes"
+alias gs="git status"
 
 open() { (command xdg-open "$@" > /dev/null 2>&1 &) }
 ff() { (command firefox > /dev/null 2>&1 &) }
