@@ -49,6 +49,8 @@ set smartcase
 " tab completion for files/bufferss
 set wildmode=longest,list
 set wildmenu
+" add custom tags filename
+set tags+=./.ctags
 
 "--------------------
 " Misc configurations
@@ -100,9 +102,21 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
 " ctrlp
-nnoremap ; :CtrlP<CR>
+nnoremap <Leader>; :CtrlP<CR>
+nnoremap <Leader>. :CtrlPTag<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
 " easymotion
 map <Space> <Plug>(easymotion-prefix)
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" enable project-specific .vimrc
+set exrc
+set secure
