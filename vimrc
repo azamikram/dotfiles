@@ -51,6 +51,8 @@ set wildmode=longest,list
 set wildmenu
 " add custom tags filename
 set tags+=./.ctags
+" recursvly search tags file
+set tags=./.ctags;$HOME
 
 "--------------------
 " Misc configurations
