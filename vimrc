@@ -28,6 +28,8 @@ set nu " number lines
 set rnu " relative line numbering
 set incsearch " incremental search (as string is being typed)
 set hls " highlight search
+" remove search highlight once done
+nnoremap <Leader><space> :nohlsearch<CR>
 set listchars=tab:>>,nbsp:~ " set list to see tabs and non-breakable spaces
 set lbr " line break
 set scrolloff=5 " show lines above and below cursor (when possible)
@@ -101,7 +103,6 @@ nnoremap <C-n> :set rnu!<CR>
 
 " nerdtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
 
 " ctrlp
 nnoremap <Leader>; :CtrlP<CR>
@@ -118,6 +119,23 @@ let g:indent_guides_guide_size = 1
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" ack.vim, require `ag` (the silver searcher)
+" fixes the issue of ack printing the outputi of ag to console
+" copied from https://github.com/mileszs/ack.vim/issues/18
+function Search(string) abort
+    let saved_shellpipe = &shellpipe
+    let &shellpipe = '>'
+     try
+        execute 'Ack!' shellescape(a:string, 1)
+    finally
+        let &shellpipe = saved_shellpipe
+    endtry
+endfunction
+
+nnoremap <Leader>f :call Search("")<left><left>
+let g:ackprg = 'ag --nogroup --nocolor --column --silent'
+let g:ackhighlight = 1
 
 " enable project-specific .vimrc
 set exrc
