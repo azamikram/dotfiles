@@ -115,6 +115,7 @@ map <Space> <Plug>(easymotion-prefix)
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 " tagbar
@@ -136,6 +137,9 @@ endfunction
 nnoremap <Leader>f :call Search("")<left><left>
 let g:ackprg = 'ag --nogroup --nocolor --column --silent'
 let g:ackhighlight = 1
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " enable project-specific .vimrc
 set exrc
