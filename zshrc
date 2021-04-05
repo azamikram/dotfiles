@@ -34,3 +34,6 @@ fortune -aes | cowsay | lolcat
 
 open() { (command xdg-open "$@" > /dev/null 2>&1 &) }
 ff() { (command firefox > /dev/null 2>&1 &) }
+
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+

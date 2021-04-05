@@ -97,6 +97,15 @@ endfunction
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
+" spell checking
+set spelllang=en
+" use the following to make spell check enable by default
+" set spell
+" Make F5 toggle spell check
+nnoremap <F5> :setlocal spell! spelllang=en_us<CR>
+" Use ]s pr [s to move between wrong words and use z= to
+" see the suggestion for the wrong spell word
+
 "---------------------
 " Plugin configuration
 "---------------------
