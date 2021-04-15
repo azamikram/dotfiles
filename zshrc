@@ -13,7 +13,7 @@ ZSH_THEME="dracula"
 plugins=(git ruby command-not-found github history-substring-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/azam/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 export EDITOR='vim'
@@ -27,6 +27,10 @@ export EDITOR='vim'
 alias zshconfig="vim ~/.zshrc"
 alias sl="sl -e"
 alias gs="git status"
+
+# Custom aliases
+alias sudo='sudo '
+alias flush="sync; echo 1 | tee /proc/sys/vm/drop_caches"
 
 DEFAULT_USER="azam"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
