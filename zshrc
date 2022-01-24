@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/azam/.oh-my-zsh
+export ZSH=/home/azam/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -38,6 +38,4 @@ fortune -aes | cowsay | lolcat
 
 open() { (command xdg-open "$@" > /dev/null 2>&1 &) }
 ff() { (command firefox > /dev/null 2>&1 &) }
-
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
